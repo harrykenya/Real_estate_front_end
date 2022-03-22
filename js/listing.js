@@ -2,7 +2,7 @@ const apiUrl = 'http://localhost:3000';
 
 function loadpageData(){
   function listsListing(){
-    const listingContainerElementId = document.getElementById("listings_container");
+    const listingContainerElementId = document.getElementById("feature_listings");
     fetchListing()
     .then((listings) => { 
       

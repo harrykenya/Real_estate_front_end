@@ -67,7 +67,9 @@ img {
   padding: 6rem 0; }
 
 .listing-preview a {
-  position: relative; }
+  position: relative; 
+  
+}
 
 @media (max-width: 991px) {
   #showcase {
@@ -81,9 +83,13 @@ img {
   #showcase {
     padding-top: 3rem; }
     #showcase h1 {
-      font-size: 40px; }
+      font-size: 40px; 
+      /* margin: 50%; */
+    }
     #showcase p {
-      display: none; }
+      display: none; 
+    text-transform:uppercase;
+    }
   #top-bar {
     text-align: center; }
     #top-bar .social {
@@ -94,3 +100,11 @@ img {
     font-size: 30px; }
   #showcase-inner h1 {
     font-size: 40px; } }
+
+
+
+  .col-12 i {
+    margin-right: 5px;
+  }
+
+  
