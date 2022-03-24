@@ -7,7 +7,7 @@ function loadpageData(){
     .then((realtors) => { 
       
       // Check if we have any realtors.
-      if(realtor.count > 0 ){
+      if(realtors.count > 0 ){
         // For each realtor, display a realtor card
         realtors['realtors'].forEach((realtor) => {
           realtorContainerElementId.appendChild(realtorCard(realtor));
@@ -51,9 +51,9 @@ function realtorCard(realtor){
         <hr>
         <div class="row py-2 text-secondary">
           <div class="col-6">
-            <i class="fas fa-th-large"></i> Sqft: ${realtor.name}</div>
+            <i class="fas fa-th-large"></i> name: ${realtor.name}</div>
           <div class="col-6">
-            <i class="fas fa-car"></i> Garage: ${realtor.email}</div>
+            <i class="fas fa-car"></i> email: ${realtor.email}</div>
         </div>
         <hr>
         <a href="realtor.html" class="btn btn-primary btn-block">More Info</a>
