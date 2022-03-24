@@ -1,5 +1,5 @@
 // const apiUrl = 'http://localhost:3000';
-const apiUrl= 'https://real-estate-new1.herokuapp.com'
+// const apiUrl= 'https://real-estate-new1.herokuapp.com'
 
 function loadpageData(){
   function listsListing(){
