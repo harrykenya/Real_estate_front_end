@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000';
+let apiUrl="http://localhost:3000"
 
 function loadpageData(){
   function listsListing(){
