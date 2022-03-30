@@ -15,7 +15,9 @@ img {
   margin-right: 0.4rem; }
 
 #showcase {
-  background-image: url(http://127.0.0.1:5500/real_estate_html_theme/assets/img/showcase.jpg) no-repeat top center fixed/cover;
+  background-image: url('/assets/img/showcase.jpg');
+  background-repeat: no-repeat;
+  background-position: top center fixed/cover;
   position: relative;
   min-height: 650px;
   color: #fff;
@@ -84,7 +86,7 @@ img {
     padding-top: 3rem; }
     #showcase h1 {
       font-size: 40px; 
-      /* margin: 50%; */
+      margin: 50%;
     }
     #showcase p {
       display: none; 
@@ -101,10 +103,63 @@ img {
   #showcase-inner h1 {
     font-size: 40px; } }
 
-
-
   .col-12 i {
     margin-right: 5px;
   }
 
+   #loader {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    z-index: 99;
+    width: 120px;
+    height: 120px;
+    margin:  0px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite; 
+  }
   
+   @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  } 
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* #loader.hidden{
+    animation: fadeOut 1ms;
+    animation-fill-mode: forwards ;
+  }
+
+  @keyframes fadeOut{
+    100%{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+   */
+
+  /* Add animation to "page content" */
+    .row{
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }  

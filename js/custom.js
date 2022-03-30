@@ -6,7 +6,7 @@ function loadpageData(){
     const listingContainerElementId = document.getElementById("listings_container");
     fetchListing()
     .then((listings) => { 
-      
+      document.getElementById("loader").style.display = "none";
       // Check if we have any listings.
       if(listings.count > 0 ){
         // For each listing, display a listing card

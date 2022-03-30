@@ -5,11 +5,12 @@ function loadpageData(){
     const realtorContainerElementId = document.getElementById("feature_realtors");
     fetchRealtor()
     .then((realtors) => { 
-      
+      document.getElementById("loader").style.display = "none";
+      console.log(realtors['realtor'].length)
       // Check if we have any realtors.
-      if(realtors.count > 0 ){
+      if(realtors["realtor"].length > 0 ){
         // For each realtor, display a realtor card
-        realtors['realtors'].forEach((realtor) => {
+        realtors['realtor'].forEach((realtor) => {
           realtorContainerElementId.appendChild(realtorCard(realtor));
         });
       } else {
@@ -51,12 +52,12 @@ function realtorCard(realtor){
         <hr>
         <div class="row py-2 text-secondary">
           <div class="col-6">
-            <i class="fas fa-th-large"></i> name: ${realtor.name}</div>
+              <p>${realtor.name}<p></div>
           <div class="col-6">
-            <i class="fas fa-car"></i> email: ${realtor.email}</div>
+            <p>${realtor.email}<p></div>
         </div>
         <hr>
-        <a href="realtor.html" class="btn btn-primary btn-block">More Info</a>
+        <a href="index.html" class="btn btn-primary btn-block">view realtor</a>
       </div>
   </div>
   `;

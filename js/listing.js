@@ -5,7 +5,7 @@ function loadpageData(){
     const listingContainerElementId = document.getElementById("feature_listings");
     fetchListing()
     .then((listings) => { 
-      
+      document.getElementById("loader").style.display = "none";
       // Check if we have any listings.
       if(listings.count > 0 ){
         // For each listing, display a listing card
@@ -45,7 +45,7 @@ function listingCard(listing){
   listingCard.classList.add('col-lg-4');
   listingCard.classList.add('mb-4');
   listingCard.innerHTML = `
-  <div class="card listing-preview">
+  <div class="card listing-preview" style="display:block">
       <img class="card-img-top" src="${listing.listingImage}" alt="${listing.name}">
       <div class="card-img-overlay">
         <h2>
@@ -85,6 +85,17 @@ function listingCard(listing){
   </div>
   `;
   return listingCard;
+}
+
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("card listing-preview").style.display = "block";
 }
 
 window.onunload = function(){
