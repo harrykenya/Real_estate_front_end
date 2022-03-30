@@ -87,16 +87,16 @@ function listingCard(listing){
   return listingCard;
 }
 
-var myVar;
+// var myVar;
 
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
+// function myFunction() {
+//   myVar = setTimeout(showPage, 3000);
+// }
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("card listing-preview").style.display = "block";
-}
+// function showPage() {
+//   document.getElementById("loader").style.display = "none";
+//   document.getElementById("card listing-preview").style.display = "block";
+// }
 
 window.onunload = function(){
   document.removeEventListener('DOMContentLoaded', loadpageData);
