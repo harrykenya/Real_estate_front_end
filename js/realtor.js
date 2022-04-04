@@ -5,7 +5,7 @@ function loadpageData(){
     const realtorContainerElementId = document.getElementById("feature_realtors");
     fetchRealtor()
     .then((realtors) => { 
-      document.getElementById("loader").style.display = "none";
+      document.getElementById("loader").style.display = "none"; //before displaying the realtors the loader to first display then display the images
       console.log(realtors['realtor'].length)
       // Check if we have any realtors.
       if(realtors["realtor"].length > 0 ){
@@ -40,7 +40,7 @@ async function fetchRealtor(){
 
 function realtorCard(realtor){
   console.log(realtor);
-  const realtorCard = document.createElement('div');
+  const realtorCard = document.createElement('div'); //creating the realtor card
   realtorCard.classList.add('realtor_card');
   realtorCard.classList.add('col-md-6');
   realtorCard.classList.add('col-lg-4');
